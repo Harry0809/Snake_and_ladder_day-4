@@ -28,9 +28,12 @@ public class SnakeAndLadder {
 					System.out.println("N0 play");
 
 				}
-				if (current_position < initial_position) {
-					current_position = initial_position;
+				if (current_position > initial_position) {
+					current_position -= initial_position;
 				}
+				if(current_position > 100)
+					current_position=0;
+					
 
 				System.out.println("currentposition: " + current_position);
 			}
