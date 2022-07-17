@@ -1,14 +1,29 @@
 package com.snake.ladder;
 
 public class SnakeAndLadder {
-	static int start_position = 0;
+	static int INITIAL_POSITION = 0;
+	static int NO_PLAY = 0;
+	static int IF_LADDER = 1;
+	static int IF_SNAKE = 2;
+	static int Positionofplayer = 0;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		System.out.println("Welcome to Snake and ladder game");
 		int dice = (int) (Math.random() * 10) % 6 + 1;
+		int option = (int) (Math.random() * 10) % 3;
 
-		System.out.println("Welcome to Snake and ladder Game");
-		System.out.println("Number on dice:" + dice);
+		if (option == IF_LADDER) {
+			System.out.println("Ladder!!");
+			Positionofplayer += dice;
+
+		} else if (option == IF_SNAKE) {
+			System.out.println("snake!!");
+			Positionofplayer -= dice;
+
+		} else {
+			System.out.println("N0 play");
+		}
+
 	}
-
 }
