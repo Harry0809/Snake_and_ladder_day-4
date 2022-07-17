@@ -4,6 +4,7 @@ public class SnakeAndLadder {
 	
 	
 		// TODO Auto-generated method stub
+		static int dice_count = 0;
 		static final int initial_position = 0;
 		static final int no_play = 0;
 		static final int ladder = 1;
@@ -15,6 +16,7 @@ public class SnakeAndLadder {
 			while (current_position < 100) {
 				int dice = (int) (Math.random() * 10) % 6 + 1;
 				int option = (int) (Math.random() * 10) % 3;
+				dice_count++;
 
 				if (option == ladder) {
 					System.out.println("ladder!!");
@@ -31,12 +33,12 @@ public class SnakeAndLadder {
 				if (current_position > initial_position) {
 					current_position -= initial_position;
 				}
-				if(current_position > 100)
-					current_position=0;
-					
+				if (current_position > 100)
+					current_position = 0;
 
 				System.out.println("currentposition: " + current_position);
 			}
 
+			System.out.println("current position" + " " +  current_position + " " +  "dice count " + " " + dice_count);
 		}
 	}
